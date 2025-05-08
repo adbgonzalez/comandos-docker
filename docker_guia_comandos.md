@@ -313,24 +313,25 @@ docker run -ditP --name intranet1 -v bd2:/var/lib/mysql -v web2:/var/www/html in
 ---
 
 ## 📤 Publicar unha imaxe en Docker Hub
+Precisades unha conta de *DockerHub*. Substituir "usuario" polo voso usuario de DockerHub.
 
 ```bash
 # Etiquetado previo
-docker tag intranet-lunes19:v1 agarciaf/intranet
+docker tag intranet-lunes19:v1 usuario/intranet
 
 # Subida ao repositorio
 docker login
-docker push agarciaf/intranet
+docker push usuario/intranet
 docker logout
 ```
 
 ### Outros comandos útiles
 
 ```bash
-docker pull agarciaf/intranet
+docker pull usuario/intranet
 docker tag intranet miusuariodockerhub/intranet
 cat /root/.docker/config.json
-docker search agarciaf
+docker search usuario
 docker search miusuariodockerhub
 ```
 
@@ -339,10 +340,10 @@ docker search miusuariodockerhub
 ## 🖼️ Publicar nginx personalizado
 
 ```bash
-docker tag nginx agarciaf/nginx-lab
+docker tag nginx usuario/nginx-lab
 docker login
 cat /root/.docker/config.json
-docker push agarciaf/nginx-lab
+docker push usuario/nginx-lab
 docker logout
-docker search agarciaf
+docker search usuario
 ```
